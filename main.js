@@ -1,16 +1,15 @@
 // Punto 1: saludo
-let sld = "Bienvenido";
-
-function saludo(sld){
-    console.log(sld)
+function saludo() {
+    console.log("Bienvenido");
 }
+
 
 //Punto 2:Calculando el mayor
 let num1, num2;
 
 function calculoMayor(num1, num2){
-    num1 = prompt("Ingrese un número");
-    num2 = prompt("Ingrese otro número");
+    num1 = parseFloat(prompt("Ingrese un número"));
+    num2 = parseFloat(prompt("Ingrese otro número"));
 
     if (num1>num2){
         console.log("El número "+ num1 + " es mayor que "+ num2);
@@ -20,7 +19,7 @@ function calculoMayor(num1, num2){
             console.log("El número "+ num2 + " es mayor que "+ num1);
         }
         else{
-            if(num1=num2){
+            if(num1 == num2) {
                 console.log("Los números ingresados son iguales");
             }
             else{
@@ -40,7 +39,7 @@ mayor = 0.60;
 
 function facturacion(monto, medio, c1, d1, e1, mayor, total){
     monto = parseFloat(prompt("Ingrese el monto del producto"));
-    medio = prompt("Ingrese medio de pago: E(efectivo), C(tarjeta de crédito), D(tarjet de débito)");
+    medio = prompt("Ingrese medio de pago: E(efectivo), C(tarjeta de crédito), D(tarjetA de débito)");
 
     if (monto < 200) {
         total = monto;
@@ -83,17 +82,19 @@ IterarArray(numeros);
 IterarArray(utiles);
 
 //Punto 5:Lanzamientos de dados
-function tirardados(naleatorio){
+function tirardados() {
     let naleatorio = Math.floor(Math.random() * 6) + 1;
-    console.log("El numero aleatorio es: " + naleatorio);
+    console.log("El número aleatorio es: " + naleatorio);
 }
 
+
 //Punto 6:Contador de click
-let click=0;
-function contadorc(click){
+let click = 0;
+function contadorc() {
     click++;
-    console.log("Número de clicks: "+ click);
+    console.log("Número de clicks: " + click);
 }
+
 
 //Punto 7 y 8: manipulación del DOM y cambiando estilos
 function manipulardom(){
@@ -110,7 +111,7 @@ function manipulardom(){
     subtitulos.forEach(h2 => {
         h2.classList.add('subtitulos');
     }); 
-    const elementosConEstilo = document.querySelectorAll('.estilo-letras'); 
+    const elementosConEstilo = document.querySelectorAll('.estilo-letras');
     elementosConEstilo.forEach(el => {
         el.classList.remove('estilo-letras');
     }); 
