@@ -30,14 +30,8 @@ function calculoMayor(num1, num2){
 }
 
 //Punto 3:Sistema de facturación
-let monto, total;
-let medio,c1,e1,d1,mayor;
-c1 = 0.90;
-e1 = 0.70;
-d1 = 0.80;
-mayor = 0.60;
-
-function facturacion(monto, medio, c1, d1, e1, mayor, total){
+function facturacion(){
+    let monto, total, medio;
     monto = parseFloat(prompt("Ingrese el monto del producto"));
     medio = prompt("Ingrese medio de pago: E(efectivo), C(tarjeta de crédito), D(tarjetA de débito)");
 
@@ -46,13 +40,13 @@ function facturacion(monto, medio, c1, d1, e1, mayor, total){
     } else if (monto >= 200 && monto <= 400) {
         switch (medio) {
             case "E":
-                total = monto * e1; 
+                total = monto * 0.7; 
                 break;
             case "D":
-                total = monto * d1;
+                total = monto * 0.8;
                 break;
             case "C":
-                total = monto * c1; 
+                total = monto * 0.9; 
                 break;
             default:
                 alert("Medio de pago no válido, no se aplicará descuento");
@@ -83,8 +77,8 @@ IterarArray(utiles);
 
 //Punto 5:Lanzamientos de dados
 function tirardados() {
-    let naleatorio = Math.floor(Math.random() * 6) + 1;
-    console.log("El número aleatorio es: " + naleatorio);
+    let numaleatorio = Math.floor(Math.random() * 6) + 1;
+    console.log("El número aleatorio es: " + numaleatorio);
 }
 
 

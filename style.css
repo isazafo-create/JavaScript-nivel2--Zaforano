@@ -1,1 +1,10 @@
 /* Add styles here */
+.subtitulos {
+    color: teal;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#punto9{
+    background-color: red;
+}
