@@ -104,18 +104,11 @@ function manipulardom(){
 
 //Punto 9: manipular el DOM de un botón a partir de un evento
 const boton = document.getElementById("punto9");
-
-boton.addEventListener('click', () => {
-  boton.textContent = 'Desactivado'; //cambia el texto
-});
-
-boton.addEventListener('mouseenter', () => {
-  boton.style.backgroundColor = 'green'; //cuando pongo el mouse cambia color
-});
-
-boton.addEventListener('mouseleave', () => {
-  boton.style.backgroundColor = 'red';
-});
+if (boton) {
+  boton.addEventListener('click', () => { boton.textContent = 'Desactivado'; });
+  boton.addEventListener('mouseenter', () => { boton.style.backgroundColor = 'green'; });
+  boton.addEventListener('mouseleave', () => { boton.style.backgroundColor = 'red'; });
+}
 
 
 //Punto 10: mostrar los datos introducidos en un formulario al usuario
