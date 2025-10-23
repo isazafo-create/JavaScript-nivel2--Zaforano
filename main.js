@@ -5,27 +5,18 @@ function saludo() {
 
 
 //Punto 2:Calculando el mayor
-let num1, num2;
-
-function calculoMayor(num1, num2){
-    num1 = parseFloat(prompt("Ingrese un número"));
-    num2 = parseFloat(prompt("Ingrese otro número"));
+function calculoMayor(){
+    let num1 = parseFloat(prompt("Ingrese un número"));
+    let num2 = parseFloat(prompt("Ingrese otro número"));
 
     if (num1>num2){
         console.log("El número "+ num1 + " es mayor que "+ num2);
     }
-    else{
-        if(num2>num1){
-            console.log("El número "+ num2 + " es mayor que "+ num1);
-        }
-        else{
-            if(num1 == num2) {
-                console.log("Los números ingresados son iguales");
-            }
-            else{
-                console.log("Los valores ingresados no son válidos");
-            }
-        }
+    else if(num2>num1) {
+        console.log("El número "+ num2 + " es mayor que "+ num1);
+    }
+    else {
+        console.log("Los números ingresados son iguales");
     }
 }
 
